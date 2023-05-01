@@ -19,6 +19,17 @@ The front end is hosted in the public subnet and CI/CD deployment pipeline will 
 ### Prerequisite
 Before you run this Terraform project, you have to complete the following setup on your Amazon account.
 
+* Create Parameters
+  
+  Under your AWS Systems Manager --> Parameter Store, please create the following parameters.
+
+  | Name | AMI Value
+  | --- | --- |
+  | webserver-custom | ami-05df5e71da6167ac5
+  | qiime2-server | ami-09cfe9d7d8c7ed99f
+  | postprocessorapi | ami-0413813467ad9f98a
+  | datacollectionapi | ami-00616fba1c6cd360c
+
 * Create AWS S3 bucket
   
     This is the location to store SRA sequencing data and user uploaded sequencing data. The following is the folder structure. They should be mounted to all modules. You can refer to main.tf to see how it is being mounted.
