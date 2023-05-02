@@ -65,7 +65,7 @@ Before you run this Terraform project, you have to complete the following setup 
   
 * Create Amazon RDS Postgres SQL database
   
-    Detail instructions please refer to Github link (TBD)
+    Detail instructions please refer to the google docs - [installation guide](https://docs.google.com/document/d/1gL4s6Z-kJS-T4UwjMmZ4GmE19DowJU5gpLapLXwsrKk/edit?usp=sharing) 
 
 
 * Install Terraform
