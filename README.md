@@ -1,20 +1,30 @@
-# Create autoscaling infrastructure using Terraform
+# Microbiome Analysis Platform 
 
-This is a project for building a microbiome search engine that allow researcher to gather studies and generate visualization using Amazon services.
+##Create autoscaling infrastructure using Terraform
+
+This is a project for building a Microbiome Analysis Platform that allow researcher to gather studies and generate visualization using Amazon services.
 
 The terraform code build an VPC that housing different modules that needed to serve the search engine website. The following three modules are created for the backend processing and allocated in the private subnet.
 
 ## Data Engineering Module
 This is the key module that takes FASTQ file and feed into the Qiime2 pipeline to generate the merged sequencing results and visualization. This module is part of the autoscaling group which allows the system to spin up/down EC2 depends on the server load. Details can be found in the autoscaling.tf file.
 
+The source code repository for this application can be found [here](https://github.com/ufuktepe/DataEngineering.git).
+
 ## Data Collection API
 This module takes the input request from the search engine website and query/download the sequencing data from NCBI SRA public database.
+
+The source code repository for this application can be found [here](https://github.com/ufuktepe/DataCollectionService.git).
 
 ## Post Processor API
 This module is in charge of generating merged sequencing results using Qiime2 and return the visualization data for front end user.
 
+The source code repository for this application can be found [here](https://github.com/ufuktepe/PostProcessorService.git).
+
 ## Website Application
-The front end is hosted in the public subnet and CI/CD deployment pipeline will be created using AWS CodePipeline. Detail implementation can be found in codebuild.tf, codedeploy.tf and codepipeline.tf.
+The front end is hosted in the public subnet and CI/CD deployment pipeline will be created using AWS CodePipeline. Detail implementation of CI/CD pipeline can be found in codebuild.tf, codedeploy.tf and codepipeline.tf.
+
+The source code repository for this application can be found [here](https://github.com/aikene/microbiome-project-ui.git). 
 
 ### Prerequisite
 Before you run this Terraform project, you have to complete the following setup on your Amazon account.
