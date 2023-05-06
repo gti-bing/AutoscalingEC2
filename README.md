@@ -11,20 +11,28 @@ This is the key module that takes FASTQ file and feed into the Qiime2 pipeline t
 
 The source code repository for this application can be found [here](https://github.com/ufuktepe/DataEngineering.git).
 
+:warning: **Important** The latest application has already been installed on the EC2 instance as part of the AWS AMI. You don't need to clone the application unless you want to make changes to the application.
+
 ## Data Collection API
 This module takes the input request from the search engine website and query/download the sequencing data from NCBI SRA public database.
 
 The source code repository for this application can be found [here](https://github.com/ufuktepe/DataCollectionService.git).
+
+:warning: **Important** The latest application has already been installed on the EC2 instance as part of the AWS AMI. You don't need to clone the application unless you want to make changes to the application.
 
 ## Post Processor API
 This module is in charge of generating merged sequencing results using Qiime2 and return the visualization data for front end user.
 
 The source code repository for this application can be found [here](https://github.com/ufuktepe/PostProcessorService.git).
 
+:warning: **Important** The latest application has already been installed on the EC2 instance as part of the AWS AMI. You don't need to clone the application unless you want to make changes to the application.
+
 ## Website Application
 The front end is hosted in the public subnet and CI/CD deployment pipeline will be created using AWS CodePipeline. Detail implementation of CI/CD pipeline can be found in codebuild.tf, codedeploy.tf and codepipeline.tf.
 
 The source code repository for this application can be found [here](https://github.com/aikene/microbiome-project-ui.git). 
+
+:warning: **Important** The latest application has already been installed on the EC2 instance as part of the AWS AMI. You don't need to clone the application unless you want to make changes to the application.
 
 ### Prerequisite
 Before you run this Terraform project, you have to complete the following setup on your Amazon account.
