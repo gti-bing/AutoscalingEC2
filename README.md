@@ -1,6 +1,6 @@
 # Microbiome Analysis Platform 
 
-##Create autoscaling infrastructure using Terraform
+## Create autoscaling infrastructure using Terraform
 
 This is a project for building a Microbiome Analysis Platform that allow researcher to gather studies and generate visualization using Amazon services.
 
